@@ -13,10 +13,6 @@ zfs_dataset="tank/k8s"
 zfs_mountpoint="/mnt/tank/k8s"
 disk_device="/dev/sdb"
 
-# Add SSH public key to authorized keys
-echo "[INFO] Adding SSH public key to authorized keys..."
-echo $1 >> /ubuntu/.ssh/authorized_keys
-
 # Wait for disk
 echo "[INFO] Waiting for the disk $disk_device to appear..."
 for i in {1..30}; do
